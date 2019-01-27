@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 	ros::NodeHandle n;
 
 	// ros::Subscriber jTraj_sub = n.subscribe("control/feedbackJoint", 1000, jointTrajectoryCallback);	
-	ros::Subscriber jTraj_sub = n.subscribe("control/jointTrajectory", 1000, jointTrajectoryCallback);	
+	ros::Subscriber jTraj_sub = n.subscribe("control/left_leg/jointTrajectory", 1000, jointTrajectoryCallback);	
 
 	ros::spin();
 

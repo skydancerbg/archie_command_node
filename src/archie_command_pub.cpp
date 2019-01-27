@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	ros::NodeHandle n;
 
 
-    ros::Publisher cmd_traj_pub = n.advertise<trajectory_msgs::JointTrajectory>("control/jointTrajectory", 1);
+    ros::Publisher cmd_traj_pub = n.advertise<trajectory_msgs::JointTrajectory>("control/left_leg/jointTrajectory", 10);
 
 
 	int pubNumberCounter(1); 
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 /////////////////////////////////////////////////////////////////////////////////////////////////////  
     //  !!!!!!!!!!!!!!!!!!!!
 	// CHANGE THE NUMBER OF JOINTS AND POINTS TO PUBLISH HERE:
-    int numberOfJoints(6);
+    int numberOfJoints(1);
 	int numberOfPoints(1);
     //  !!!!!!!!!!!!!!!!!!!!
     ///////////////////////////////////////////////

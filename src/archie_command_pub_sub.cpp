@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
 
 	ros::NodeHandle n;
 
-	ros::Subscriber jTraj_sub = n.subscribe("control/feedbackJoint", 1000, jointTrajectoryCallback);	// Listening to the imcoming Arduino messages ....
+	ros::Subscriber jTraj_sub = n.subscribe("control/left_leg/feedbackJoint", 1000, jointTrajectoryCallback);	// Listening to the imcoming Arduino messages ....
 	// ros::Subscriber jTraj_sub = n.subscribe("control/jointTrajectory", 1000, jointTrajectoryCallback);	// Just for testing - subscribed to itself :)
 
-    ros::Publisher cmd_traj_pub = n.advertise<trajectory_msgs::JointTrajectory>("control/jointTrajectory", 1);
+    ros::Publisher cmd_traj_pub = n.advertise<trajectory_msgs::JointTrajectory>("control/left/leg/jointTrajectory", 1);
 
 	int pubNumberCounter(1); 
     /////////////////////////////////////////////////////////////////////////////////////////////////////  
